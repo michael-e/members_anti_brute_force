@@ -18,6 +18,12 @@ require_once EXTENSIONS . '/anti_brute_force/extension.driver.php';
 class Extension_members_anti_brute_force extends Extension
 {
     /**
+     * Name of the extension
+     * @var string
+     */
+    const EXT_NAME = 'Members Anti Brute Force';
+
+    /**
      * MembersDriver
      *
      * @var Extension_Members
@@ -87,7 +93,8 @@ class Extension_members_anti_brute_force extends Extension
      */
     public function membersAuthFailure($context)
     {
-        ABF::instance()->registerFailure($context['username'], 'Members ABF');
+        ABF::instance()->authorLoginFailure($context['username'], self::EXT_NAME);
+
         if (ABF::instance()->isCurrentlyBanned()) {
             // Redirect to prevent resubmitting the form by reloading the page
             redirect(isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : URL);
