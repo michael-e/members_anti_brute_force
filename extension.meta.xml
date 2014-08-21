@@ -4,7 +4,7 @@
 	<description lang="en">Companion to the Anti Brute Force extension. Adds tracking of Members login and password reset.</description>
 	<repo type="github">https://github.com/michael-e/members_anti_brute_force</repo>
 	<dependencies>
-		<dependency version="1.4">anti_brute_force</dependency>
+		<dependency version="1.4.6">anti_brute_force</dependency>
 		<dependency version="1.4">members</dependency>
 	</dependencies>
 	<types>
@@ -19,10 +19,11 @@
 		</author>
 	</authors>
 	<releases>
+		<release version="1.1" date="2014-08-20" min="2.4" max="2.5">
+			- Fix issue with colored lists. Now requires Anti Brute Force 1.4.6.
+		</release>
 		<release version="1.0" date="2014-08-09" min="2.4" max="2.5">
-			<![CDATA[
-- Initial release
-			]]>
+			- Initial release
 		</release>
 	</releases>
 </extension>
