@@ -107,7 +107,7 @@ class Extension_members_anti_brute_force extends Extension
      * Add ABF status to the Param Pool
      *
      * @uses FrontendParamsResolve
-     * @param string $context
+     * @param array $context
      * @return void
      */
     public function frontendParamsResolve($context)
